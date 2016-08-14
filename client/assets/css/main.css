@@ -82,24 +82,25 @@ body {
 }
 
 .document-item {
-  padding: 27px 14px 14px 27px;
+  padding: 14px 100px;
   border-bottom: 1px solid #f0f0f0;
-}
-
-.document-item__content {
-  float: left;
-  width: 80%;
-  padding-left: 100px;
   position: relative;
-}
-
-.document-item__controls {
-  float: left;
-  text-align: right;
-  width: 20%;
+  min-height: 50px;
 }
 
 .document-item__date {
   position: absolute;
   left: 0;
+  top: 14px;
+  padding: 0 10px;
 }
+
+.document-item__controls {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  text-align: right;
+  width: 100px;
+}
+
+

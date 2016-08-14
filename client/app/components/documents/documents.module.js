@@ -5,8 +5,8 @@ import DocumentsComponent from './documents.component';
 
 let DocumentsModule = angular
   .module('documents', [uiRouter])
-  .config(config)
   .component('documents', DocumentsComponent)
+  .config(config)
   .name;
 
 /* @ngInject */
