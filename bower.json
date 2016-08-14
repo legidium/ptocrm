@@ -1,18 +1,22 @@
 {
   "name": "ptocrm",
   "dependencies": {
-    "angular": "latest",
-    "angular-resource": "latest",
-    "angular-cookies": "latest",
-    "angular-mocks": "latest",
-    "angular-route": "latest",
-    "angular-animate": "latest",
-    "angular-messages": "latest",
-    "angular-messages-format": "latest",
-    "angular-ui-router": "latest",
-    "angular-ui-select": "latest",
-    "angular-sanitize": "latest",
-    "angular-bootstrap": "latest",
     "bootstrap": "latest"
-  }
+  },
+  "homepage": "https://github.com/legidium/ptocrm",
+  "authors": [
+    "Vitaliy Antonov <legidium@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "lib",
+    "test",
+    "tests"
+  ]
 }
