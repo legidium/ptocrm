@@ -61,3 +61,45 @@ body {
   position: relative;
   width: 240px;
 }
+
+.panel {
+  position: relative;
+  border: none;
+  box-shadow: none;
+}
+
+.panel__header {
+  background: #fbfbfb;
+  padding: 27px 27px 14px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.panel__title {
+  color: #444;
+  font-size: 32px;
+  line-height: 40px;
+  margin: 0 0 14px;
+}
+
+.document-item {
+  padding: 27px 14px 14px 27px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.document-item__content {
+  float: left;
+  width: 80%;
+  padding-left: 100px;
+  position: relative;
+}
+
+.document-item__controls {
+  float: left;
+  text-align: right;
+  width: 20%;
+}
+
+.document-item__date {
+  position: absolute;
+  left: 0;
+}

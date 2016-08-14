@@ -1,7 +1,8 @@
 {
   "name": "ptocrm",
   "dependencies": {
-    "bootstrap": "latest"
+    "bootstrap": "latest",
+    "font-awesome": "fontawesome#^4.6.3"
   },
   "homepage": "https://github.com/legidium/ptocrm",
   "authors": [
