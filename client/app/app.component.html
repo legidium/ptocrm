@@ -1,8 +1,11 @@
 <div class="app">
   <header class="header">
-    <a href="#" ui-sref="dashboard">Панель управления</a> |
-    <a href="#" ui-sref="documents">Документы</a>
+    <a class="header__link" href="#" ui-sref="dashboard">Панель управления</a>
+    <a class="header__link" href="#" ui-sref="documents">Документы</a>
   </header>
-  <main class="main container" ui-view></main>
-  <footer class="header"></footer>
+  <main class="main">
+    <div class="sidebar">Навигация</div>
+    <div class="content" ui-view></div>
+  </main>
+  <footer class="footer"></footer>
 </div>

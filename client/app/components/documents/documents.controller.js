@@ -1,7 +1,18 @@
 class DocumentsController {
   constructor() {
     this.name = 'documents';
-    console.log('Documents');
+  }
+
+  $onInit() {
+    console.log('Init');
+  }
+
+  $onChanges($change) {
+    console.log('Change');
+  }
+
+  $onDestroy() {
+    console.log('Destroy');
   }
 }
 

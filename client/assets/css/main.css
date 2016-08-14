@@ -1,0 +1,63 @@
+html {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  min-height: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #fff;
+  color: #777;
+  text-rendering: optimizeLegibility;
+}
+
+.header {
+  background: #222;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
+}
+
+.header__link {
+  color: #ababab;
+  display: inline-block;
+  padding: 14px;
+}
+
+.header__link:hover,
+.header__link:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.content {
+  height: 100vh;
+  margin-top: 1px;
+  padding-bottom: 59px;
+  overflow-y: auto;
+  width: auto;
+  -webkit-overflow-scrolling: touch;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+
+}
+
+.sidebar {
+  background: #444;
+  position: relative;
+  width: 240px;
+}
