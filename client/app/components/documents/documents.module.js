@@ -10,12 +10,9 @@ let DocumentsModule = angular
   .name;
 
 /* @ngInject */
-function config($urlRouterProvider, $stateProvider) {
-  $urlRouterProvider.otherwise('/');
-
-  $stateProvider
-    .state('documents', {
-      url: '/',
+function config($stateProvider) {
+  $stateProvider.state('documents', {
+      url: '/documents',
       component: 'documents'
     });
 }
