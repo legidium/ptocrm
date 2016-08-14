@@ -2,24 +2,6 @@ class DocumentController {
   constructor() {
     this.name = 'document';
     this.title = 'Документ';
-
-    this.document = [
-      {
-        date: Date.now(),
-        type: 'hidden_act',
-        title: 'Акт скрытых работ'
-      },
-      {
-        date: Date.now(),
-        type: 'hidden_act',
-        title: 'Акт скрытых работ'
-      },
-      {
-        date: Date.now(),
-        type: 'hidden_act',
-        title: 'Акт скрытых работ'
-      }
-    ];
   }
 
   $onInit() {

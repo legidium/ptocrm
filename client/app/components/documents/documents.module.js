@@ -11,7 +11,8 @@ let DocumentsModule = angular
 
 /* @ngInject */
 function config($stateProvider) {
-  $stateProvider.state('documents', {
+  $stateProvider
+    .state('documents', {
       url: '/documents',
       component: 'documents'
     });

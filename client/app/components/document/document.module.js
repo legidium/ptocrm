@@ -11,10 +11,11 @@ let DocumentModule = angular
 
 /* @ngInject */
 function config($stateProvider) {
-  $stateProvider.state('document', {
-    url: '/document',
-    component: 'document'
-  });
+  $stateProvider
+    .state('document', {
+      url: '/document/:id',
+      component: 'document'
+    });
 }
 
 export default DocumentModule;
