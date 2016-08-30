@@ -1,11 +1,10 @@
-import template from './app.component.html';
 import controller from './app.controller';
+import template   from './app.component.html';
 import './app.component.css';
 
-let AppComponent = {
-  restrict: 'E',
-  template,
-  controller
+const AppComponent = {
+  controller,
+  template
 };
 
-export default AppComponent;
+export { AppComponent };

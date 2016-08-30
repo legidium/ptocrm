@@ -1,3 +1,5 @@
+'use strict';
+
 var webpack = require('webpack');
 var path    = require('path');
 var config  = require('./webpack.config');
@@ -9,6 +11,11 @@ config.output = {
 };
 
 config.plugins = config.plugins.concat([
+  new webpack.DefinePlugin({
+    'process.env': {
+      NODE_ENV: JSON.stringify('development')
+    }
+  }),
   new webpack.HotModuleReplacementPlugin()
 ]);
 

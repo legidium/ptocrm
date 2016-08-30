@@ -1,10 +1,12 @@
-'use strict';
-
 import angular from 'angular';
 
-import App from './app/app.module';
+import './lib/bootstrap/dist/css/bootstrap.min.css';
+import './lib/font-awesome/css/font-awesome.min.css';
 import './assets/css/main.css';
 
+import { AppModule } from './app';
+
 angular.element(document).ready(function () {
-  angular.bootstrap(document, [App], { strictDi: true });
+  angular.bootstrap(document, [AppModule], { strictDi: true });
 });
+

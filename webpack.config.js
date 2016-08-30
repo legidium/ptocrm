@@ -10,13 +10,16 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        exclude: [/\.(spec|e2e)\.js$/, /client\/lib/, /server/, /node_modules/],
+        exclude: [/\.(spec|e2e)\.js$/, /client\/lib|server/, /node_modules|bower_components/, /^dist/],
         loader: 'ng-annotate!babel'
       },
       { test: /\.html$/, loader: 'raw' },
       { test: /\.styl$/, loader: 'style!css!stylus' },
       { test: /\.css$/, loader: 'style!css' },
-      { test: /(.*)\.(eot|svg|ttf|woff|woff2)$/, loader: 'url-loader' }
+      {
+        test: /(.*)\.(eot|svg|ttf|woff|woff2)/,
+        loader: 'file-loader?name=./assets/fonts/[hash].[ext]'
+      }
     ]
   },
   plugins: [
@@ -25,11 +28,27 @@ module.exports = {
       inject: 'body',
       hash: true
     }),
+    new webpack.optimize.OccurenceOrderPlugin(true),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
       minChunks: function (module, count) {
         return module.resource && module.resource.indexOf(path.resolve(__dirname, 'client')) === -1;
       }
     })
-  ]
+  ],
+
+  /*
+   * Include polyfills or mocks for various node stuff
+   * Description: Node configuration
+   *
+   * See: https://webpack.github.io/docs/configuration.html#node
+   */
+  node: {
+    global: 'window',
+    crypto: 'empty',
+    process: true,
+    module: false,
+    clearImmediate: false,
+    setImmediate: false
+  }
 };

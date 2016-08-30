@@ -12,8 +12,7 @@ import webpackHotMiddleware from 'webpack-hot-middleware';
 import colorsSupported      from 'supports-color';
 import historyApiFallback   from 'connect-history-api-fallback';
 
-let root = 'client';
-
+let root                = 'client';
 let resolveToApp        = (glob = '') => {
   return path.join(root, 'app', glob);
 };
@@ -23,7 +22,7 @@ let resolveToComponents = (glob = '') => {
 let paths               = {
   js: resolveToComponents('**/*!(.spec.js).js'), // exclude spec files
   entry: [
-   // 'babel-polyfill',
+    'babel-polyfill',
     path.join(__dirname, root, 'main.js')
   ],
   output: root,
@@ -68,7 +67,7 @@ gulp.task('serve', () => {
 gulp.task('watch', ['serve']);
 
 gulp.task('component', () => {
-  const cap        = (val) => {
+  const cap = (val) => {
     return val.charAt(0).toUpperCase() + val.slice(1);
   };
   const name       = yargs.argv.name;

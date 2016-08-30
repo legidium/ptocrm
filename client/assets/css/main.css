@@ -23,18 +23,6 @@ body {
   display: flex
 }
 
-.header__link {
-  color: #ababab;
-  display: inline-block;
-  padding: 14px;
-}
-
-.header__link:hover,
-.header__link:focus {
-  color: #fff;
-  text-decoration: none;
-}
-
 .main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -101,4 +89,21 @@ body {
   width: 100px;
 }
 
+
+/* Form */
+.form-fields {
+  margin: 0 0 20px;
+  padding: 0 0 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.form-actions {
+  margin-bottom: 20px;
+}
+
+.select .select__control {
+  height: 34px;
+  padding: 6px 12px;
+  width: 100%;
+}
 

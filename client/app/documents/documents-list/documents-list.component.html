@@ -1,0 +1,26 @@
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Status</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr ng-repeat="document in $ctrl.documents track by $index">
+    <td>{{ document.id }}</td>
+    <td><a ui-sref="app.documents.edit({ id: $index + 1 })">{{document.title}}</a></td>
+    <td>{{ document.status }}</td>
+    <td>
+      <a class="btn btn-default btn-xs" ui-sref="app.documents.edit({id: document.id})">
+        <i class="fa fa-pencil"></i>
+      </a>
+      <a class="btn btn-danger btn-xs" ng-click="$ctrl.onDelete({$event: {id: document.id}})">
+        <i class="fa fa-remove"></i>
+      </a>
+    </td>
+  </tr>
+  </tbody>
+</table>
+

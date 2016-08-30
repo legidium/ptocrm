@@ -1,8 +1,11 @@
 class AppController {
+  /* @ngInject */
   constructor() {
     this.name = 'app';
+  }
 
-    console.log('APP');
+  $onInit() {
+    console.log(this);
   }
 }
 

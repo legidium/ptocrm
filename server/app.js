@@ -42,9 +42,9 @@ app.use(bodyParser.json());
 app.use(methodOverride('_method'));
 
 // API
-var api = '/api/v1';
-app.use(api + '/acts', require('./routes/acts'));
-app.use(api + '/people', require('./routes/people'));
+var api = '/api/v1/';
+app.use(api + 'documents', require('./routes/documents'));
+app.use(api + 'people', require('./routes/people'));
 
 // Error handlers
 app.use(function(req, res, next) {

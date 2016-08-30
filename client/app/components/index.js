@@ -1,4 +1,10 @@
-export * from './dashboard';
-export * from './documents';
-export * from './document';
-export * from './components.module';
+import angular from 'angular';
+
+import { NavigationComponent } from './navigation';
+
+const ComponentsModule = angular
+  .module('app.components', [])
+  .component('navigation', NavigationComponent)
+  .name;
+
+export { ComponentsModule };

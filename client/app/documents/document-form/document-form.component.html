@@ -1,0 +1,174 @@
+<form class="form">
+
+  <!-- Объект строительства -->
+  <div class="form-section">
+    <fieldset>
+      <legend>Объект капитального строительства</legend>
+      <div class="form-group">
+        <label for="construction-name">Наименование объекта</label>
+        <input type="text" class="form-control" id="construction-name" name="construction_name" value="">
+      </div>
+      <div class="form-group">
+        <label for="construction-address">Адрес объекта</label>
+        <input type="text" class="form-control" id="construction-address" name="construction_address" value="">
+      </div>
+    </fieldset>
+  </div>
+
+  <!-- Участники -->
+  <div class="form-section">
+    <fieldset>
+      <legend>Участники (организации, подписанты)</legend>
+      <div class="form-fields">
+        <div class="form-group">
+          <label for="entity-type">Тип организации</label>
+          <div class="select">
+            <select class="select__control" id="entity-type" name="entity_type">
+              <option>Застройщик или технический заказчик</option>
+              <option>Лицо, осуществляющее строительство</option>
+              <option>Лицо, осуществляющее подготовку проектной документации</option>
+              <option>Лицо, выполнившее работы, подлежащие освидетельствованию</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="entity-ogrn">ОГРН</label>
+              <input type="text" class="form-control" id="entity-ogrn" name="entity_ogrn" value="">
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="entity-inn">ИНН организации</label>
+              <input type="text" class="form-control" id="entity-inn" name="entity_inn" value="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-fields">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label for="certificate-num">Номер свидетельства о допуске</label>
+              <a tabindex="0" role="button" title="Информация"
+                 data-toggle="popover"
+                 data-trigger="focus"
+                 data-content="Номер свидетельства о допуске к видам работ по строительству, реконструкции, капитальному
+              ремонту объектов капитального строительства, которые оказывают влияние на безопасность объектов капитального
+              строительства">
+                <i class="fa fa-question-circle"></i>
+              </a>
+              <input type="text" class="form-control" id="certificate-num" name="certificate_num" value="">
+              <p class="help-block text-muted"></p>
+            </div>
+          </div>
+          <div class="col-sm-8">
+            <div class="form-group">
+              <label for="certificate-issuer">Наименование организации выдавшей свидетельство</label>
+              <input type="text" class="form-control" id="certificate-issuer" name="certificate_issuer" value="">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label for="certificate-date">Дата выдачи свидетельства</label>
+              <input type="text" class="form-control" id="certificate-date" name="certificate_date" value="">
+            </div>
+          </div>
+          <div class="col-sm-8">
+            <div class="form-group">
+              <label for="certificate-address">Почтовые реквизиты организации выдавшей свидетельство</label>
+              <input type="text" class="form-control" id="certificate-address" name="certificate_address" value="">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label for="certificate-person-name">ФИО физ.лица выдавшего свидетельство</label>
+              <input type="text" class="form-control" id="certificate-person-name" name="certificate_person_name" value="">
+            </div>
+          </div>
+          <div class="col-sm-8">
+            <div class="form-group">
+              <label for="certificate-person-details">Паспортные данные физ.лица выдавшего свидетельство</label>
+              <input type="text" class="form-control" id="certificate-person-details" name="certificate-person-details" value="">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label for="certificate-issuer-phone">Телефон/факс</label>
+              <a tabindex="0" role="button" title="Подсказка"
+                 data-toggle="popover"
+                 data-trigger="focus"
+                 data-content="Телефон/факс саморегулируемой организации/физ.лица выдавшей/выдавшего свидетельство">
+                <i class="fa fa-question-circle"></i>
+              </a>
+              <input type="text" class="form-control" id="certificate-issuer-phone" name="certificate_issuer_phone" value="">
+            </div>
+          </div>
+          <div class="col-sm-8">
+            <div class="form-group">
+              <label for="certificate-person-address">Место проживания физ.лица выдавшего свидетельство</label>
+              <input type="text" class="form-control" id="certificate-person-address" name="certificate_person_address" value="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Представители</legend>
+      <table class="table table-bordered table-hover">
+        <thead>
+          <th>#</th>
+          <th>Тип представителя</th>
+          <th>Должность</th>
+          <th></th>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="width: 5%;">1</td>
+            <td style="width: 25%;">
+              Производитель работ
+            </td>
+            <td style="width: 60%;">
+              Мастер
+            </td>
+            <td style="width: 10%;">
+              <div class="cell-actions">
+                <a href="#" class="btn btn-default btn-sm"><i class="fa fa-pencil"></i></a>
+                <a href="#" class="btn btn-default btn-sm"><i class="fa fa-close"></i></a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td style="width: 5%;">&nbsp;</td>
+            <td style="width: 25%;">
+              <div class="select">
+                <select class="select__control" id="contractor-agent-type" name="contractor_agent_type">
+                  <option>Производитель работ</option>
+                  <option>Строительный контроль</option>
+                  <option>Авторский контроль</option>
+                </select>
+              </div>
+            </td>
+            <td style="width: 60%;">
+              <input type="text" class="form-control" id="contractor-agent-position" name="contractor_agent_position" value="">
+            </td>
+            <td style="width: 10%;">
+              <a href="#" class="btn btn-success btn-sm"><i class="fa fa-plus"></i>&nbsp;&nbsp;Добавить</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="form-actions">
+        <button type="button" class="btn btn-primary">Добавить</button>
+      </div>
+    </fieldset>
+  </div>
+
+</form>
